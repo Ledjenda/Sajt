@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veleprodaja | DIM TEAM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <details class="site-menu">
+        <summary aria-label="Otvori meni">&#9776;</summary>
+        <nav><a href="index.html">Pocetna strana</a><a href="proizvodi.html">Proizvodi</a><a href="veleprodaja.html">Veleprodaja</a><a href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a></nav>
+      </details>
+      <a class="brand" href="index.html" aria-label="DIM TEAM pocetna"><img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="DIM TEAM logo" /></a>
+      <div class="welcome" data-welcome hidden></div>
+      <div class="header-search" data-header-search><div class="header-search-panel" data-search-panel hidden><input data-search-input placeholder="Pretrazi proizvode" /><div data-search-results></div></div><button class="header-action" data-search-open aria-label="Pretrazi proizvode">&#128269;</button></div>
+      <details class="profile-menu" data-profile-menu hidden><summary aria-label="Moj nalog"><span data-profile-initial></span></summary><nav data-profile-links></nav></details>
+      <a class="cart-link" href="proizvodi.html#cart">Korpa <span data-cart-count>0</span></a>
+    </header>
+    <main class="page-shell">
+      <section class="page-title"><p class="eyebrow">B2B nalog</p><h1>Veleprodaja</h1><p>Prijavite se da biste videli cene i rabate svoje firme.</p></section>
+      <section class="split section">
+        <div>
+          <h2>Posebne cene za svakog kupca</h2>
+          <p>Svaki veleprodajni kupac ima svoje korisnicko ime, sifru i pravila za rabat. Posle prijave otvorite stranicu Proizvodi.</p>
+          <div class="demo-logins"><span>firmaA / 1234</span><span>firmaB / 1234</span><span>admin / admin</span></div>
+        </div>
+        <form class="panel" id="loginForm">
+          <h3>Prijava</h3>
+          <label>Korisnicko ime<input id="username" autocomplete="username" placeholder="firmaA" /></label>
+          <label>Sifra<input id="password" type="password" autocomplete="current-password" placeholder="1234" /></label>
+          <button class="primary full" type="submit">Prijavi se</button>
+          <button class="secondary full" type="button" id="logoutButton">Odjavi se</button>
+          <p class="form-message" id="loginMessage"></p>
+        </form>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

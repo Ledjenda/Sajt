@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proizvodi | DIM TEAM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <details class="site-menu">
+        <summary aria-label="Otvori meni">&#9776;</summary>
+        <nav>
+          <a href="index.html">Pocetna strana</a><a href="proizvodi.html">Proizvodi</a><a href="veleprodaja.html">Veleprodaja</a><a href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a>
+        </nav>
+      </details>
+      <a class="brand" href="index.html" aria-label="DIM TEAM pocetna"><img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="DIM TEAM logo" /></a>
+      <div class="welcome" data-welcome hidden></div>
+      <div class="header-search" data-header-search><div class="header-search-panel" data-search-panel hidden><input data-search-input placeholder="Pretrazi proizvode" /><div data-search-results></div></div><button class="header-action" data-search-open aria-label="Pretrazi proizvode">&#128269;</button></div>
+      <details class="profile-menu" data-profile-menu hidden><summary aria-label="Moj nalog"><span data-profile-initial></span></summary><nav data-profile-links></nav></details>
+      <button class="cart-link" id="cartButton">Korpa <span data-cart-count>0</span></button>
+    </header>
+    <main class="page-shell">
+      <section class="page-title">
+        <p class="eyebrow">Katalog</p>
+        <h1>Proizvodi</h1>
+        <p>Pregledajte proizvode i kupujte u maloprodaji bez prijave.</p>
+      </section>
+      <section class="section">
+        <div class="catalog-layout">
+          <aside class="catalog-filters panel">
+            <h3>Filteri</h3>
+            <label>Kategorija<select data-filter="category"><option value="">Sve</option><option>Boje</option><option>Fasade</option><option>Auto program</option><option>Alat</option></select></label>
+            <label>Proizvodjac<select data-filter="manufacturer"><option value="">Svi</option></select></label>
+            <label>Boja<select data-filter="colorName"><option value="">Sve</option></select></label>
+            <label>Pakovanje<select data-filter="packageSize"><option value="">Sva</option></select></label>
+            <label>Baza<select data-filter="base"><option value="">Sve</option></select></label>
+            <label>Namena<select data-filter="purpose"><option value="">Sve</option></select></label>
+            <button class="secondary full" id="clearFilters">Ponisti filtere</button>
+          </aside>
+          <div>
+            <div class="catalog-toolbar"><strong id="productCount"></strong><div class="view-switch" aria-label="Nacin prikaza"><button class="active" data-view="grid" title="Kartice">&#9638;</button><button data-view="compact" title="Kratka lista">&#9776;</button><button data-view="detailed" title="Detaljna lista">&#9636;</button></div><label>Sortiranje<select id="sortProducts"><option value="default">Preporuceno</option><option value="price-asc">Cena: rastuce</option><option value="price-desc">Cena: opadajuce</option><option value="name">Naziv: A-Z</option></select></label></div>
+            <div class="product-grid" id="productGrid" data-catalog-view="grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-head"><h2>Korpa</h2><button class="icon-btn" id="closeCart">Zatvori</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span>Ukupno</span><strong id="cartTotal">0 RSD</strong></div>
+      <button class="primary full">Posalji upit / porudzbinu</button>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

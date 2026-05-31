@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | DIM TEAM</title><link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <details class="site-menu"><summary aria-label="Otvori meni">&#9776;</summary><nav><a href="index.html">Pocetna strana</a><a href="proizvodi.html">Proizvodi</a><a href="veleprodaja.html">Veleprodaja</a><a href="o-nama.html">O nama</a><a href="kontakt.html">Kontakt</a></nav></details>
+      <a class="brand" href="index.html" aria-label="DIM TEAM pocetna"><img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="DIM TEAM logo" /></a>
+      <div class="welcome" data-welcome hidden></div>
+      <div class="header-search" data-header-search><div class="header-search-panel" data-search-panel hidden><input data-search-input placeholder="Pretrazi proizvode" /><div data-search-results></div></div><button class="header-action" data-search-open aria-label="Pretrazi proizvode">&#128269;</button></div>
+      <details class="profile-menu" data-profile-menu hidden><summary aria-label="Moj nalog"><span data-profile-initial></span></summary><nav data-profile-links></nav></details>
+      <a class="cart-link" href="proizvodi.html#cart">Korpa <span data-cart-count>0</span></a>
+    </header>
+    <main class="page-shell">
+      <section class="page-title"><p class="eyebrow">Glavni nalog</p><h1>Admin panel</h1><p id="adminLock">Prijavite se kao admin / admin na stranici Veleprodaja.</p></section>
+      <section class="admin-grid section">
+        <form class="panel" id="discountForm">
+          <h3>Rabat po kupcu</h3>
+          <label>Kupac<select id="customerSelect"><option value="firmaA">firmaA</option><option value="firmaB">firmaB</option></select></label>
+          <label>Opsti rabat (%)<input id="baseDiscount" type="number" min="0" max="60" step="1" /></label>
+          <label>Dodatan rabat za kategoriju<select id="categorySelect"><option>Boje</option><option>Fasade</option><option>Auto program</option><option>Alat</option></select></label>
+          <label>Kategorijski rabat (%)<input id="categoryDiscount" type="number" min="0" max="60" step="1" /></label>
+          <button class="primary full" type="submit">Sacuvaj pravila</button>
+          <p class="form-message" id="adminMessage"></p>
+        </form>
+        <div class="panel"><h3>Pregled naloga</h3><div id="customerRules"></div></div>
+      </section>
+      <section class="section admin-products">
+        <div class="section-head"><div><p class="eyebrow">Katalog</p><h2>Upravljanje proizvodima</h2></div></div>
+        <div class="admin-grid">
+          <form class="panel" id="productForm">
+            <h3 id="productFormTitle">Dodaj proizvod</h3>
+            <input id="productId" type="hidden" />
+            <label>Naziv proizvoda<input id="productName" required /></label>
+            <label>Kategorija<select id="productCategory"><option>Boje</option><option>Fasade</option><option>Auto program</option><option>Alat</option></select></label>
+            <label>Maloprodajna cena (RSD)<input id="productPrice" type="number" min="0" step="1" required /></label>
+            <label>Opis<textarea id="productDescription" rows="4"></textarea></label>
+            <label>Slika proizvoda<input id="productImage" type="file" accept="image/*" /></label>
+            <label>Proizvodjac<input id="productManufacturer" /></label>
+            <label>Boja<input id="productColorName" /></label>
+            <label>Pakovanje<input id="productPackageSize" placeholder="npr. 10L ili 25kg" /></label>
+            <label>Baza<select id="productBase"><option>Vodena</option><option>Uljana</option><option>Nitro</option><option>3u1</option><option>Nije primenljivo</option></select></label>
+            <label>Namena<input id="productPurpose" placeholder="npr. drvo, metal, beton" /></label>
+            <button class="primary full" type="submit">Sacuvaj proizvod</button>
+            <button class="secondary full" id="cancelProductEdit" type="button">Ponisti izmenu</button>
+            <p class="form-message" id="productMessage"></p>
+          </form>
+          <div class="panel">
+            <h3>Postojeci proizvodi</h3>
+            <div id="adminProductList"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section admin-customers">
+        <div class="section-head"><div><p class="eyebrow">Veleprodaja</p><h2>Kupci i posebne cene</h2></div></div>
+        <div class="admin-grid">
+          <div class="panel"><h3>Veleprodajni kupci</h3><div id="adminCustomerList"></div></div>
+          <div class="panel" id="customerDetails"><p>Izaberite kupca da biste videli istoriju gledanja i posebne cene.</p></div>
+        </div>
+      </section>
+      <section class="section admin-accounts">
+        <div class="section-head"><div><p class="eyebrow">Pristup</p><h2>Nalozi i dozvole</h2></div></div>
+        <div class="admin-grid">
+          <form class="panel" id="accountForm">
+            <h3>Napravi nalog</h3>
+            <label>Korisnicko ime<input id="newUsername" required /></label>
+            <label>Naziv kupca<input id="newAccountLabel" required /></label>
+            <label>Sifra<input id="newPassword" required /></label>
+            <label>Telefon<input id="newPhone" /></label>
+            <label>Email<input id="newEmail" type="email" /></label>
+            <label>Raspolozivi kredit (RSD)<input id="newCredit" type="number" min="0" value="0" /></label>
+            <label><input id="permissionPrices" type="checkbox" checked /> Moze da vidi veleprodajne cene</label>
+            <label><input id="permissionRequests" type="checkbox" checked /> Moze da salje specijalne zahteve</label>
+            <button class="primary full" type="submit">Napravi nalog</button>
+            <p class="form-message" id="accountMessage"></p>
+          </form>
+          <div class="panel"><h3>Postojeci nalozi</h3><div id="accountList"></div></div>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

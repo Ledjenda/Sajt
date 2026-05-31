@@ -1,0 +1,1 @@
+export default function Requests(){return <main><section className="page-title"><p className="eyebrow">Veleprodaja</p><h1>Specijalni zahtevi</h1></section><section className="section narrow"><form className="panel"><label>Komentar<textarea rows={7}/></label><button className="button primary">Posalji zahtev</button></form></section></main>}

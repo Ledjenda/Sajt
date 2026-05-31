@@ -1,0 +1,1 @@
+export default function About(){return <main><section className="page-title"><p className="eyebrow">DIM TEAM</p><h1>O nama</h1></section><section className="section narrow"><div className="panel"><h2>Sve za zavrsne radove</h2><p>Boje, lakovi, fasade, auto program, gipsani program i alat za kucne kupce, majstore i firme.</p></div></section></main>}

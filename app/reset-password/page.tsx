@@ -1,0 +1,1 @@
+export default function ResetPassword(){return <main><section className="page-title"><p className="eyebrow">Bezbednost</p><h1>Nova sifra</h1></section><section className="section narrow"><form className="panel"><label>Nova sifra<input type="password"/></label><button className="button primary">Sacuvaj novu sifru</button></form></section></main>}

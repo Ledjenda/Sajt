@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="DIM TEAM logo">
+  <circle cx="130" cy="130" r="124" fill="#071522"/>
+  <path d="M65 112 130 73l65 39" fill="none" stroke="#dcae55" stroke-width="5"/>
+  <path d="M78 109v-19h15v10" fill="none" stroke="#dcae55" stroke-width="4"/>
+  <text x="130" y="143" fill="#ffffff" font-family="Arial, sans-serif" font-size="35" font-weight="700" text-anchor="middle">DIM-TEAM</text>
+  <path d="M65 154h130M74 165h112" stroke="#dcae55" stroke-width="3"/>
+  <text x="130" y="188" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">FARBARA I GRADJEVINSKI MATERIJAL</text>
+</svg>

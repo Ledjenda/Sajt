@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DIM TEAM | Farbara i veleprodaja</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <details class="site-menu">
+        <summary aria-label="Otvori meni">&#9776;</summary>
+        <nav>
+          <a href="index.html">Pocetna strana</a>
+          <a href="proizvodi.html">Proizvodi</a>
+          <a href="veleprodaja.html">Veleprodaja</a>
+          <a href="o-nama.html">O nama</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </details>
+      <a class="brand" href="index.html" aria-label="DIM TEAM pocetna">
+        <img src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" alt="DIM TEAM logo" />
+      </a>
+      <div class="welcome" data-welcome hidden></div>
+      <div class="header-search" data-header-search><div class="header-search-panel" data-search-panel hidden><input data-search-input placeholder="Pretrazi proizvode" /><div data-search-results></div></div><button class="header-action" data-search-open aria-label="Pretrazi proizvode">&#128269;</button></div>
+      <details class="profile-menu" data-profile-menu hidden>
+        <summary aria-label="Moj nalog"><span data-profile-initial></span></summary>
+        <nav data-profile-links></nav>
+      </details>
+      <a class="cart-link" href="proizvodi.html#cart">Korpa <span data-cart-count>0</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img src="assets/shop-hero.png" alt="Moderna farbara sa policama boja i alata" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Maloprodaja i veleprodaja</p>
+          <h1>DIM TEAM</h1>
+          <p>Boje, lakovi, fasade, auto program, gipsani program i alat za majstore, firme i kucne kupce.</p>
+          <div class="hero-actions">
+            <a class="primary" href="proizvodi.html">Pogledaj proizvode</a>
+            <a class="secondary" href="veleprodaja.html">Veleprodajni login</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-intro">
+        <div>
+          <p class="eyebrow">Sve na jednom mestu</p>
+          <h2>Za kucu, radionicu i gradiliste</h2>
+          <p>Otvorite katalog za kupovinu ili se prijavite kao veleprodajni kupac da biste videli svoje cene i rabate.</p>
+        </div>
+        <div class="quick-links">
+          <a href="proizvodi.html"><strong>Proizvodi</strong><span>Pregledajte katalog</span></a>
+          <a href="veleprodaja.html"><strong>Veleprodaja</strong><span>Prijavite se za B2B cene</span></a>
+          <a href="kontakt.html"><strong>Kontakt</strong><span>Adresa, telefon i Instagram</span></a>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
