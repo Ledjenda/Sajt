@@ -389,6 +389,25 @@ document.querySelector("#cartButton")?.addEventListener("click", () => { cartDra
 document.querySelector("#closeCart")?.addEventListener("click", closeDrawers);
 overlay?.addEventListener("click", closeDrawers);
 
+function closeHeaderMenus(except) {
+  document.querySelectorAll(".site-menu, .profile-menu").forEach((menu) => {
+    if (menu !== except) menu.open = false;
+  });
+  document.querySelectorAll("[data-search-panel]").forEach((panel) => { panel.hidden = true; });
+}
+document.addEventListener("click", (event) => {
+  const summary = event.target.closest(".site-menu summary, .profile-menu summary");
+  if (summary) { closeHeaderMenus(summary.closest("details")); return; }
+  if (event.target.closest("[data-search-open]")) {
+    document.querySelectorAll(".site-menu, .profile-menu").forEach((menu) => { menu.open = false; });
+    return;
+  }
+  if (event.target.closest(".site-menu nav a, .profile-menu nav a, .profile-menu nav button")) {
+    closeHeaderMenus(); return;
+  }
+  if (!event.target.closest(".site-menu, .profile-menu, [data-header-search]")) closeHeaderMenus();
+});
+
 document.querySelectorAll("[data-search-open]").forEach((button) => button.addEventListener("click", () => {
   const panel = button.closest("[data-header-search]").querySelector("[data-search-panel]");
   panel.hidden = !panel.hidden;
